@@ -77,7 +77,6 @@ public class StepDefinationListApp {
 		String actualText = applist.waterMarkWhenNoList.getAttribute("content-desc").toString();
 		String expectedText = "Grocery List Maker\n"+ "Start adding your grocery lists";
 		Assert.assertEquals(actualText, expectedText);
-		driver.quit();
 	}
 
 	@Then("user selects Edit option")
@@ -104,7 +103,6 @@ public class StepDefinationListApp {
 	public void user_get_display_updated_list_in_list_section() {
 		// Write code here that turns the phrase above into concrete actions
 		applist.Addeditem.isDisplayed();
-		driver.quit();
 	}
 
 	@And("user taps on Add new list button")
@@ -125,6 +123,5 @@ public class StepDefinationListApp {
 	public void user_get_display_added_list_in_list_section() {
 		// Write code here that turns the phrase above into concrete actions
 		applist.Addeditem.isDisplayed();
-		driver.quit();
 	}
 }
