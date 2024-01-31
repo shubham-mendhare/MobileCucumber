@@ -1,0 +1,65 @@
+gnore logs
+
+*.log
+
+
+
+# Ignore video files
+
+*.mp4
+
+*.mkv
+
+*.flv
+
+*.avi
+
+*.mov
+
+*.wmv
+
+
+
+# Ignore audio files
+
+*.mp3
+
+*.wav
+
+*.flac
+
+*.m4a
+
+*.aac
+
+
+
+# Ignore Maven target directory
+
+target/
+
+
+
+# Ignore files related to IDE
+
+.idea/
+
+*.iml
+
+.classpath
+
+.project
+
+.settings/
+
+.vscode/
+
+
+
+# Ignore OS generated files
+
+.DS_Store
+
+Thumbs.db
+
+
