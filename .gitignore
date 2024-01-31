@@ -62,4 +62,6 @@ target/
 
 Thumbs.db
 
+# Ignore extent Reports folders
+/test-output/
 

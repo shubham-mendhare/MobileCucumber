@@ -8,7 +8,7 @@ import java.net.URISyntaxException;
 
 import org.testng.Assert;
 
-import com.org.projects.CucumberMobile.PageObjects.AppList;
+import com.org.projects.CucumberMobile.PageObjects.AppListTest;
 import com.org.projects.CucumberMobile.utils.TestContextSetup;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -19,7 +19,7 @@ import io.cucumber.java.en.When;
 
 public class StepDefinationListApp {
 	AndroidDriver driver;
-	AppList applist;
+	AppListTest applist;
 	TestContextSetup testContextSetup;
 	
 	public StepDefinationListApp(TestContextSetup testContextSetup) throws MalformedURLException, URISyntaxException{

@@ -4,6 +4,8 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import com.org.projects.CucumberMobile.stepDefinations.Hooks;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
@@ -15,7 +17,8 @@ public class TestBase {
 		options.setDeviceName("emulator-5554");
 		options.setApp(System.getProperty("user.dir") + "/app-release.apk");
 		if (driver == null) {
-			driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
+		//	driver = new AndroidDriver(new URI("http://127.0.0.1:4723").toURL(), options);
+			driver = new AndroidDriver(Hooks.service.getUrl(), options);
 		}
 		return driver;
 	}

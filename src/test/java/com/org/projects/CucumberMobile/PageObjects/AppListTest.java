@@ -8,7 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class AppList {
+public class AppListTest {
 	
 	AndroidDriver driver;
 	public AndroidAction actions;
@@ -45,7 +45,7 @@ public class AppList {
 
 	
 	
-	public AppList(AndroidDriver driver){
+	public AppListTest(AndroidDriver driver){
 		
 	    this.driver = driver;
 	    actions=new AndroidAction(driver);
