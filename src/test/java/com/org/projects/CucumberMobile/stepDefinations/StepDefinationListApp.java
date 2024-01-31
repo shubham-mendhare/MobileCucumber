@@ -46,7 +46,7 @@ public class StepDefinationListApp {
 	public void user_taps_and_hold_on_existing_title_list() {
 		// Write code here that turns the phrase above into concrete actions
 		// applist.longPressElement(applist.Addeditem);
-		applist.actions.longPressElement(applist.Addeditem);
+		applist.longPressElement(applist.Addeditem);
 	}
 
 	@Then("user selects Delete option")

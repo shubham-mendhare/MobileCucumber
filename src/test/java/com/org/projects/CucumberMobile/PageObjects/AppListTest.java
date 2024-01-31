@@ -8,10 +8,10 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class AppListTest {
+public class AppListTest extends AndroidAction {
 	
 	AndroidDriver driver;
-	public AndroidAction actions;
+//	public AndroidAction actions;
 	
 	
 	@AndroidFindBy(accessibility ="ADD NEW LIST")
@@ -46,9 +46,9 @@ public class AppListTest {
 	
 	
 	public AppListTest(AndroidDriver driver){
-		
+		super(driver);
 	    this.driver = driver;
-	    actions=new AndroidAction(driver);
+	 //   actions=new AndroidAction(driver);
 	    PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	    
 	}
@@ -64,7 +64,7 @@ public class AppListTest {
 	
 	public void EditList(String Updatedlistdetails) {
 	//	actions.longPressAction(Addeditem);
-		actions.longPressElement(Addeditem);
+		longPressElement(Addeditem);
 		EDIT.click();
 		InputTextField.click();
 		driver.hideKeyboard();
@@ -74,7 +74,7 @@ public class AppListTest {
 	
 	public void DeleteList() {
 	//	actions.longPressAction(Addeditem);
-		actions.longPressElement(Addeditem);
+		longPressElement(Addeditem);
 		DELETE.click();
 		YES.click();
 	}
