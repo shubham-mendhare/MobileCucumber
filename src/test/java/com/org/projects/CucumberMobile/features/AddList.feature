@@ -1,16 +1,16 @@
 Feature: Add/Update/Delete List feature
   User addds the list, checks the added list, update the list and finally deletes the list
  
-
-  Scenario Outline: Add List
+	@AddList 
+  Scenario: Add List
   	Given user opens the List app
     And user taps on Add new list button
     Then user enters the list title as "NewList1"
     And user taps on save button
     Then user get display added list in list section
 
- 
-   Scenario Outline: Edit List
+ 		@EditList 
+   Scenario: Edit List
    	Given user opens the List app
     And user taps on Add new list button
     Then user enters the list title as "NewList1"
