@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 
 import java.net.URISyntaxException;
 
-import org.testng.Assert;
+import org.junit.Assert;
 
 import com.org.projects.CucumberMobile.PageObjects.AppListTest;
 import com.org.projects.CucumberMobile.utils.TestContextSetup;
