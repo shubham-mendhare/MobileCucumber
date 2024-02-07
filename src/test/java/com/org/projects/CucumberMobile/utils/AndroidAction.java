@@ -16,6 +16,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class AndroidAction {
 	
@@ -78,4 +79,15 @@ public class AndroidAction {
 	        .perform();
 	}
 	
+	public void TapByCoordinates(int x_axis, int y_axis) {
+		// Initialize the TouchAction class
+		TouchAction touchAction = new TouchAction(driver);
+
+		// Specify the x and y coordinates
+		int x = x_axis;
+		int y = y_axis;
+
+		// Perform the tap action
+		touchAction.tap(PointOption.point(x, y)).perform();
+	}
 }

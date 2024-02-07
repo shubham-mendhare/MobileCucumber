@@ -58,18 +58,18 @@ public static Properties prop;
 	    if(service == null) {
 	    	System.out.println(TestContextSetup.ANSI_GREEN + "************Inside @BeforeAll Tag****************" + TestContextSetup.ANSI_RESET);
 	    	System.out.println(TestContextSetup.ANSI_YELLOW + "************Initializing Appium server…****************" + TestContextSetup.ANSI_RESET);
-	        service = new AppiumServiceBuilder()
-	            .withAppiumJS(new File("C:\\Users\\shubh\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-	            .withArgument(() -> "--use-plugins", "element-wait,device-farm,appium-dashboard,gestures")
-	            .withArgument(() -> "-ka", "800")
-	            .withArgument(() -> "--plugin-device-farm-platform", "android")
-	         // .withArgument(() -> "--allow-insecure","adb_shell")
-	            .withArgument(() -> "--log-level","error")
-	            .withTimeout(Duration.ofSeconds(120))
-	            .withIPAddress(Hooks.prop.getProperty("AppiumURL"))
-	            .usingPort(Integer.parseInt(Hooks.prop.getProperty("AppiumPort")))
-	            .build();
-	        service.start();
+//	        service = new AppiumServiceBuilder()
+//	            .withAppiumJS(new File("C:\\Users\\shubh\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+//	            .withArgument(() -> "--use-plugins", "element-wait,device-farm,appium-dashboard,gestures")
+//	            .withArgument(() -> "-ka", "800")
+//	            .withArgument(() -> "--plugin-device-farm-platform", "android")
+//	         // .withArgument(() -> "--allow-insecure","adb_shell")
+//	            .withArgument(() -> "--log-level","error")
+//	            .withTimeout(Duration.ofSeconds(120))
+//	            .withIPAddress(Hooks.prop.getProperty("AppiumURL"))
+//	            .usingPort(Integer.parseInt(Hooks.prop.getProperty("AppiumPort")))
+//	            .build();
+//	        service.start();
 	        System.out.println(TestContextSetup.ANSI_YELLOW + "************Appium server started.****************" + TestContextSetup.ANSI_RESET);
 	    }
 	}
@@ -105,8 +105,8 @@ public static Properties prop;
         // Stop Appium server
         if (service != null) {
         	System.out.println(TestContextSetup.ANSI_YELLOW + "************Terminating appium server....****************" + TestContextSetup.ANSI_RESET);
-            service.stop();
-            service = null;
+//            service.stop();
+//            service = null;
             System.out.println(TestContextSetup.ANSI_YELLOW + "************Appium server terminated.****************" + TestContextSetup.ANSI_RESET);
           //  RunBatchScript();
             
