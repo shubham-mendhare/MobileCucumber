@@ -1,0 +1,15 @@
+MutableCapabilities caps = new MutableCapabilities();
+caps.setCapability("platformName", "Android");
+caps.setCapability("appium:app", "storage:filename=app-release.apk");  // The filename of the mobile app
+caps.setCapability("appium:deviceName", "Android GoogleAPI Emulator");
+caps.setCapability("appium:platformVersion", "12.0");
+caps.setCapability("appium:automationName", "UiAutomator2");
+
+
+MutableCapabilities sauceOptions = new MutableCapabilities();
+sauceOptions.setCapability("username", "oauth-warriorshourya-7d18d");
+sauceOptions.setCapability("accessKey", "b9c470bb-f4fd-4ed9-bd47-71c2a29a2fb6");
+sauceOptions.setCapability("build", "appium-build-MW3H1");
+sauceOptions.setCapability("name", "<your test name>");
+sauceOptions.setCapability("deviceOrientation", "PORTRAIT");
+caps.setCapability("sauce:options", sauceOptions);
